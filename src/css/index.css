@@ -1,7 +1,6 @@
 *{
 	margin: 0;
 	padding: 0;
-	background: #f5f5f5;
 }
 a{text-decoration: none;}
 .nav,.wp{
@@ -134,30 +133,49 @@ a{text-decoration: none;}
 }
 /* 轮播图 */
 .swiper-container {
-	width: 1280px;
+	/* width: 1280px; */
+	width: 100%;
 	height: 450px;
 	--swiper-theme-color: red;
 	--swiper-navigation-color: gray;
  
-}  
+} 
+.swiper-container .swiper-pagination span{
+	border-radius: 2px;
+	width: 16px;
+	height: 4px;
+}
 .swiper-container .swiper-slide a{
 	display: block;
-	width: 1280px;
+	/* width: 1280px; */
+	width: 100%;
 	height: 450px;
 	background-image: url(../images/s2.jpg);
 	background-repeat:no-repeat ;
-	background-position: -350px;
+	background-position: -150px;
 }
 .swiper-container .swiper-button-prev{
 	background: #595959;
+	left: 250px;
+	opacity: 0.3;
 }
 .swiper-container .swiper-button-next{
 	background: #595959;
+	right: 200px;
+	opacity: 0.3;
 }
 /* chanpin */
+.top30{
+	height: 30px;
+	background: #f5f5f5;
+}
+.bot20{
+	height: 20px;
+	background: #f5f5f5;
+}
 .chanpin{
-	margin-top: 30px;
-	margin-bottom: 20px;
+	background: #f5f5f5;
+	
 }
 .chanpin .mod-tit{
 	height: 40px;
@@ -174,6 +192,9 @@ a{text-decoration: none;}
 .chanpin .mod-tit .desc{
 	font-size: 16px;
 	color: #8c8c8c;
+}
+.luyinbi{
+	background: #f5f5f5;
 }
 .luyinbi .wp{
 	height: 375px;
@@ -200,6 +221,9 @@ a{text-decoration: none;}
 }
 .pens1 a:hover{
 	box-shadow: -5px 5px 5px #808080;
+}
+.tiancaibiao{
+	background: #f5f5f5;
 }
 .tiancaibiao .wp2{
 	width: 1180px;
@@ -260,6 +284,177 @@ a{text-decoration: none;}
 .tiancaibiao .wp2 .list2 a:hover{
 	box-shadow: -1px 5px 5px #808080;
 }
+.banner-1{
+	height: 160px;
+	background: #f5f5f5;
+}
+.banner-1 .wp{
+	height: 160px;
+}
+.banner-1 .wp .banner-img a{
+	display: block;
+	width: 1180px;
+	background: transparent;
+}
+.banner-1 .wp .banner-img a img{
+	width: 100%;
+	display: block;
+	height: auto;
+	border-radius: 2px;
+}
+/* 轮播图2 */
+.lunbo2{
+	width: 1180px;
+	height: 400px;
+	--swiper-theme-color: red;
+	--swiper-navigation-color: gray;
+ 
+}  
+.lunbo2 .swiper-slide a{
+	display: block;
+	width: 1180px;
+	height: 400px;
+	background-image: url(../images/s2.jpg);
+	background-repeat:no-repeat ;
+	background-position: 0px;
+}
+.lunbo2 .swiper-button-prev{
+	background: #595959;
+	left: 0;
+}
+.lunbo2 .swiper-button-next{
+	background: #595959;
+	right: 0;
+}
+
+
+.videowp{
+	background: #f5f5f5;
+	height: 280px;
+	
+}
+.videowp .wp{
+	width: 1180px;
+	margin: auto;
+}
+.videowp .wp .video{
+	width: 1200px;
+}
+.videowp .wp .video a{
+	margin-bottom: 0;
+	display: block;
+	width: 280px;
+	height: 277px;
+	float: left;
+	background: #fff;
+	margin-right: 20px;
+	position: relative;
+	transition: 0.3s;
+	top: 0;
+	border-radius: 2px;
+}
+.videowp .wp .video a:hover{
+	box-shadow: -1px 5px 5px #808080;
+}
+.videowp .wp .video a .cover{
+	width: 280px;
+	height: 200px;
+	position: relative;
+}
+.videowp .wp .video a .info{
+	text-align: center;
+	padding: 19px 20px 0;
+	height: 58px;
+	background: #fff;
+}
+.videowp .wp .video a .cover img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.videowp .wp .video a .cover span{
+	width: 40px;
+	height: 40px;
+	left: 17px;
+	bottom: 18px;
+	background-size: 40px;
+	position: absolute;
+	background: url(../images/1.png) no-repeat;
+	background-position: -749px -30px;
+}
+.videowp .wp .video a .info .tit{
+	font-size: 16px;
+	color: #262626;
+	margin-bottom: 8px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.videowp .wp .video a .info .desc{
+	font-size: 14px;
+	color: #8C8C8C;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* 导航滑过 */
+.show{
+    position: absolute;
+    left: 0;
+    top:120px;
+    border-top:1px solid #e8e8e8;
+    border-bottom:1px solid #e8e8e8;
+    width: 100%;
+    height: 275px;
+    z-index: 10;
+    background: #fff;
+}
+.show_c{
+    height: 275px;
+	margin-left: 200px;
+}
+.show_c_box{
+   float: left;
+    width: 200px;
+    height: 220px;
+    padding: 20px 0 35px;
+}
+.ass{
+    text-align: center;
+    cursor: pointer;
+    width:100%;
+    height: 100%;
+   
+}
+.show_c_box:hover h1{
+    color:#ea413c;
+}
+.ass>p{
+    color: #ea413c;
+    line-height: 20px;
+    font-size: 14px;
+}
+.ass>img{
+    width: 170px;
+    height: 170px;
+    margin: 0 auto;
+}
+.fenge{
+    width: 1px;
+    height: 100px;
+    background: #e8e8e8;
+    display: block;
+    margin-top: 58px;
+    float: left;
+}
+.ass>h1{
+    color: #262626;
+     font-size: 14px;
+     line-height: 30px;
+}
+/* 导航滑过 */
+
 
 
 

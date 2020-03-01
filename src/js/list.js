@@ -1,0 +1,16 @@
+$(".menu>li").mouseenter(function(){
+	if($(this).attr('data-show')){
+		 $('.show').eq($(this).index()-1).show()
+		 .siblings('.show').hide();
+		 console.log(1)
+	}
+})
+$(".menu>li").mouseleave(function(){
+	$(".show").hide();
+})
+$(".show").mouseenter(function(){
+	$(this).show();
+})
+$(".show").mouseleave(function(){
+	$(this).hide();
+})
