@@ -140,6 +140,7 @@ a{text-decoration: none;}
 	--swiper-navigation-color: gray;
  
 } 
+
 .swiper-container .swiper-pagination span{
 	border-radius: 2px;
 	width: 16px;
@@ -156,11 +157,13 @@ a{text-decoration: none;}
 }
 .swiper-container .swiper-button-prev{
 	background: #595959;
+	padding: 10px;
 	left: 250px;
 	opacity: 0.3;
 }
 .swiper-container .swiper-button-next{
 	background: #595959;
+	padding: 10px;
 	right: 200px;
 	opacity: 0.3;
 }

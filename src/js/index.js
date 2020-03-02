@@ -35,7 +35,6 @@ $(".menu>li").mouseenter(function(){
 	if($(this).attr('data-show')){
 		 $('.show').eq($(this).index()-1).show()
 		 .siblings('.show').hide();
-		 console.log(1)
 	}
 })
 $(".menu>li").mouseleave(function(){
@@ -47,8 +46,11 @@ $(".show").mouseenter(function(){
 $(".show").mouseleave(function(){
 	$(this).hide();
 })
- 
- 
+$('.menu>li').eq(3).click(function(){
+	location.href = '../pages/list.html'
+})
+
+
  
  
  

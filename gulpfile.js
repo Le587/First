@@ -72,7 +72,12 @@ const serverHandler = () => {
                port: 8080, // 端口号, 0 ~ 65535, 尽量不适用 0 ~ 1023
                open: './pages/index.html', // 你默认打开的首页, 从 dist 下面的目录开始书写
                livereload: true, // 自动刷新浏览器 - 热重启
-             
+			   proxies:[
+				   {
+						source:'/dt',
+						target:'https://mall.sogou.com/api/product/product/product_list'
+					}
+			   ]
              }))
 }
 
