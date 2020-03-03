@@ -375,7 +375,6 @@ a{text-decoration: none;}
 }
 .class-box .class-con .classify2 span{
 	font-size: 14px;
-	color: #8c8c8c;
 	margin-right: 10px;
 }
 .class-box .class-con .classify2 a{
@@ -405,7 +404,7 @@ a{text-decoration: none;}
 	position: absolute;
 	top: 0;
 	left: 0;
-	background:url(../images/1.jpg) no-repeat;
+	background:url(../images/1.png) no-repeat;
 	background-position: -52px -30px;
 }
 .class-box .class-con .class-sort .sort-icon i:last-child{
@@ -415,8 +414,16 @@ a{text-decoration: none;}
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background:url(../images/1.jpg) no-repeat;
+	background:url(../images/1.png) no-repeat;
 	background-position: -45px -30px;
+}
+.classify .class-box .class-con .class-sort .sort-icon .redjiantou{
+	background:url(../images/1.png) no-repeat ;
+	background-position: -66px -30px;
+}
+.classify .class-box .class-con .class-sort .sort-icon .redjiantoub{
+	background:url(../images/1.png) no-repeat ;
+	background-position: -59px -30px;
 }
 .class-box .list-box{
 	margin-top: 23px;

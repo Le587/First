@@ -30,3 +30,14 @@ $(".show").mouseleave(function(){
 $('.menu>li').eq(3).click(function(){
 	location.href = '../pages/list.html'
 })
+
+
+
+//放大镜
+$('.gakki').hiZoom({
+  width: 498,
+  position: 'right'
+  
+});
+
+			
