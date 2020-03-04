@@ -28,7 +28,6 @@ $(".show").mouseleave(function(){
  })
 
 
-
 //页面最初的渲染
 function paixu(num){
 	$.ajax({
@@ -51,11 +50,11 @@ function paixu(num){
 		let arr = res.data.pageList
 		arr.forEach(item =>{
 			str +=	`
-					<a href="#" class="products">
+					<a href="#" class="products" data-id=${item.productId}>
 						<img src=${item.image} >
 						<span class="name">${item.name}</span>
 						<span class="desc">${item.desc}</span>
-						<span class="price"j>¥ ${item.linePrice /100}</span>
+						<span class="price">${item.linePrice /100}</span>
 					</a>
 					`
 			
@@ -66,7 +65,6 @@ function paixu(num){
 })
 }
 paixu(1)
-
 
 
 
@@ -103,11 +101,11 @@ $('.jiage-btn').click(function(){
 				})
 				arr.forEach(item =>{
 					str +=	`
-							<a href="#" class="products">
+							<a href="#" class="products"  data-id=${item.productId}>
 								<img src=${item.image} >
 								<span class="name">${item.name}</span>
 								<span class="desc">${item.desc}</span>
-								<span class="price"j>¥ ${item.linePrice /100}</span>
+								<span class="price">${item.linePrice /100}</span>
 							</a>
 							`
 					
@@ -139,11 +137,11 @@ $('.jiage-btn').click(function(){
 				})
 				arr.forEach(item =>{
 					str +=	`
-							<a href="#" class="products">
+							<a href="#" class="products" data-id=${item.productId}>
 								<img src=${item.image} >
 								<span class="name">${item.name}</span>
 								<span class="desc">${item.desc}</span>
-								<span class="price"j>¥ ${item.linePrice /100}</span>
+								<span class="price">${item.linePrice /100}</span>
 							</a>
 							`
 					
@@ -189,4 +187,20 @@ $('.page-btn').first().click(function(){
 	$('.page-btn').last().removeClass('pa1')
 	paixu(1)
 })
+
+$('.list-box').on('click','.products',function(){
+	const id = $(this).data('id')
+	let data = {
+		'id':id,
+		'img':$(this).children('img').attr('src'),
+		'name':$(this).children('.name').text(),
+		'desc':$(this).children('.desc').text(),
+		'price':$(this).children('.price').text()
+	}
+	
+	localStorage.setItem('goods_info', JSON.stringify(data))
+	window.location.href = '../pages/detail.html'
+})
+
+
 
