@@ -58,6 +58,7 @@ const goodsInfo = JSON.parse(localStorage.getItem('goods_info'))
 $('.nummore').click(function(){
 	i++
 	$('.d-count').text(i) 
+	
 })
 //减少件数
 $('.numless').click(function(){
@@ -80,13 +81,32 @@ if(localStorage.getItem('carts')){
 }else{
 	arr = []
 }
+
+
+
 $('.btn-boxl').click(function(){
-		let num = $('.d-count').text() 
-		arr.push(goodsInfo)
-		arr.forEach(item => {
-			item.num = num
-			
+		//点击购物车  把数量加进去
+		let num = $('.d-count').text()
+		
+		//相同不添加
+		let exits = arr.some(item => {
+		  return item.id === goodsInfo.id
 		})
+		if(exits){
+			for(let i = 0 ;i<arr.length;i++){
+				if(arr[i].id === goodsInfo.id){
+					arr[i].num++
+					console.log(arr[i].num)
+				}
+			}
+		}else{
+			goodsInfo.num = num
+				
+				
+			arr.push(goodsInfo)
+		}
+		
+		
 		localStorage.setItem('carts',JSON.stringify(arr))
 		window.location.href = '../pages/cart.html'
 })
